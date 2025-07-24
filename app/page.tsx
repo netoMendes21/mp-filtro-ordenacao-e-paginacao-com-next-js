@@ -13,7 +13,7 @@ import {
 import axios from "axios";
 
 type ComponentProps = {
-  searchParams?: { search?: string; status: string };
+  searchParams?: { search?: string; status: string; sort: string };
 };
 
 export default async function Component({ searchParams }: ComponentProps) {
@@ -24,6 +24,7 @@ export default async function Component({ searchParams }: ComponentProps) {
       params: {
         search: searchParams?.search,
         status: searchParams?.status,
+        sort: searchParams?.sort,
       },
     }
   );
